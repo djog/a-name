@@ -8,7 +8,7 @@ cd ../bin
 echo running...
 echo.
 
-app.exe
+blastaway.exe
 
 echo.
 cd ..

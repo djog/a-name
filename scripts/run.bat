@@ -1,4 +1,4 @@
 cd ../bin
-app.exe
+blastaway.exe
 @pause
 cd ../scripts
