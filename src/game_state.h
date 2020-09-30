@@ -3,7 +3,7 @@
 
 enum class game_state
 {
-  drawing
+  playing
 };
 
 #endif // GAME_STATE_H

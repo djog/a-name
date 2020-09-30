@@ -1,4 +1,4 @@
-#include "sfml_drawing_screen.h"
+#include "sfml_game.h"
 #include "sfml_window_manager.h"
 #include "sfml_resources.h"
 #include <iostream>
@@ -6,7 +6,7 @@
 
 // Base class //
 
-sfml_drawing_screen::sfml_drawing_screen(int ca)
+sfml_game::sfml_game(int ca)
     : close_at{ ca }, m_window{ sfml_window_manager::get().get_window() },
       m_default_font{ sfml_resources::get().get_default_font() }
 {
@@ -14,8 +14,8 @@ sfml_drawing_screen::sfml_drawing_screen(int ca)
   m_text.setString("Hello world!\n\nsample text");
 }
 
-void sfml_drawing_screen::exec() {
-  while (active(game_state::drawing) && close_at != 0) {
+void sfml_game::exec() {
+  while (active(game_state::playing) && close_at != 0) {
     sf::Event event;
     while (m_window.pollEvent(event))
     {
@@ -29,7 +29,7 @@ void sfml_drawing_screen::exec() {
   if (close_at == 0) close();
 }
 
-void sfml_drawing_screen::process_event(sf::Event event) {
+void sfml_game::process_event(sf::Event event) {
   switch (event.type) {
     case sf::Event::Closed:
         close();
@@ -66,21 +66,21 @@ void sfml_drawing_screen::process_event(sf::Event event) {
   }
 }
 
-void sfml_drawing_screen::set_positions() {
+void sfml_game::set_positions() {
   m_text.setPosition(m_window.mapPixelToCoords(sf::Vector2i(100, 100)));
 }
 
-void sfml_drawing_screen::draw_objects() {
+void sfml_game::draw_objects() {
   m_window.clear(sf::Color(120, 120, 120));
   m_window.draw(m_text);
   m_window.display();
 }
 
-void sfml_drawing_screen::close(game_state s) {
+void sfml_game::close(game_state s) {
   sfml_window_manager::get().set_state(s);
 }
 
-void sfml_drawing_screen::close() {
+void sfml_game::close() {
   m_window.close();
 }
 

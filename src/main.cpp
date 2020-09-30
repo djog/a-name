@@ -1,6 +1,6 @@
 #include "game_state.h"
 #include "sfml_window_manager.h"
-#include "sfml_drawing_screen.h"
+#include "sfml_game.h"
 #include "sfml_resources.h"
 #include <iostream>
 #include <vector>
@@ -13,8 +13,8 @@ void test() {
   //test_normal_char();
 }
 
-int show_sfml_drawing_screen(int ca) {
-  sfml_drawing_screen ds(ca);
+int show_sfml_game(int ca) {
+  sfml_game ds(ca);
   ds.exec();
   return 0;
 }
@@ -57,8 +57,8 @@ int main(int argc, char **argv) {
   }
   
   while (sfml_window_manager::get().get_window().isOpen()) {
-    if (sfml_window_manager::get().get_state() == game_state::drawing) {
-      show_sfml_drawing_screen(close_at);
+    if (sfml_window_manager::get().get_state() == game_state::playing) {
+      show_sfml_game(close_at);
     }
   }
   

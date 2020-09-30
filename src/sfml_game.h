@@ -1,15 +1,15 @@
-#ifndef SFML_DRAWING_SCREEN_H
-#define SFML_DRAWING_SCREEN_H
+#ifndef SFML_game_H
+#define SFML_game_H
 
 #include "game_state.h"
 #include "sfml_resources.h"
 #include <SFML/Graphics.hpp>
 
-class sfml_drawing_screen
+class sfml_game
 {
 public:
 
-    sfml_drawing_screen(int ca);
+    sfml_game(int ca);
 
     void exec();
 
@@ -37,4 +37,4 @@ private:
 
 };
 
-#endif // SFML_DRAWING_SCREEN_H
+#endif // SFML_game_H
