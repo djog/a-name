@@ -2,16 +2,16 @@
 
 a-name repository containing the space RPG game Blast away, a game written in C++.
 
-Collaborators:
+### Collaborators:
 
-Mart Prenger
-Joshua van Waardenberg
-Joshua Lambert
+- Mart Prenger
+- Joshua van Waardenberg
+- Joshua Lambert
 
-Git branching model:
+### Git branching model:
 
-master
-stable
-joshua
-lambert
-mart
+- stable
+- master
+- joshua
+- lambert
+- mart
