@@ -25,7 +25,7 @@ Here, you will need to check two boxes:
  * Pick the MinGW version you have installed and download the zip
  * Unpack the zip, it will create a folder called `SFML-2.X.Y` (where X and Y are version numbers)
  * Rename that folder to `sfml`
- * Move that folder to within `C:/Qt`. Its new path will be `C:/Qt/sfml`
+ * Move that folder to within `C:/sfml`. Its new path will be `C:/sfml`
 
 ## 3. Let Qt Creator find SFML library
 
